@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Delayed time",
+  "description": "This extension allows save your time and do not waste it on social networks",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
